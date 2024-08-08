@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class CommonDataController extends Controller
@@ -26,4 +27,14 @@ class CommonDataController extends Controller
 
         // return response()->json(['success' => true]);
     }
+
+    public function index(){
+        return view('dataInput',[
+            'provinces'=>Location::distinct()->pluck('province'),
+            'districts' => [],
+            'asc_s' => [],
+            'ai_ranges' => [],
+        ]);
+    }
+
 }

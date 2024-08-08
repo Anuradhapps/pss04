@@ -14,15 +14,16 @@ return new class extends Migration
     {
         Schema::create('pest_data', function (Blueprint $table) {
             $table->id();
-            $table->id();
-            $table->foreignIdFor(CommonData::class)->constrained()->cascadeOnDelete(); // Foreign key to common_data table
-
+            $table->foreignIdFor(CommonData::class)->constrained('common_data')->onDelete('cascade'); // Foreign key to commondata table
+            $table->integer('cropGrowthCode');
+            $table->integer('NoOfRainyDaysInLastWeek');
+            $table->integer('temperature');
             for ($i = 1; $i <= 10; $i++) {
                 for ($j = 1; $j <= 5; $j++) {
                     $table->integer("location{$i}_pest{$j}")->nullable(); // Pest count fields
                 }
             }
-
+            $table->string('otherPestDamages');
             $table->timestamps();
         });
     }

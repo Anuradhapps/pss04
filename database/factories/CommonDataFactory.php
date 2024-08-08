@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -23,7 +24,7 @@ class CommonDataFactory extends Factory
             'village' => fake()->city(),
             'latitude' => fake()->latitude(),
             'longitude' => fake()->longitude(),
-            'crop_variety' => fake()->unique()->word(),
+            'crop_variety' => 'Bg '.$this->faker->numberBetween(200, 450),
             'established_date' => fake()->date(),
             'breeding_method' => fake()->randomElement(['Broadcast', 'Transplant', 'Parachute']),
         ];

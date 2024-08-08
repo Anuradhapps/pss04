@@ -17,7 +17,14 @@ class PestDataFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'cropGrowthCode' => $this->faker->numberBetween(1, 9),
+            'NoOfRainyDaysInLastWeek' => $this->faker->numberBetween(0, 7),
+            'temperature' => $this->faker->numberBetween(20, 40),
+            // Generate random values for pest counts
+            ...collect(range(1, 10))->flatMap(fn($i) =>
+                collect(range(1, 5))->mapWithKeys(fn($j) => ["location{$i}_pest{$j}" => $this->faker->numberBetween(0, 100)])
+            )->toArray(),
+            'otherPestDamages' => $this->faker->sentence(),
         ];
     }
 }
