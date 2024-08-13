@@ -1,8 +1,9 @@
 <x-app-layout>
     <x-slot name="header">
-            {{ __('Data Table') }}
+        {{ __('Chart') }}
     </x-slot>
     <x-main-panel>
-        hello
+        <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
     </x-main-panel>
+
 </x-app-layout>

@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -25,10 +25,10 @@ require __DIR__ . '/auth.php';
 
 
 Route::get('/chart', function () {
-    return view('chart');
+    return view('chart.index');
 })->name('chart');
 Route::get('/dataTable', function () {
-    return view('dataTable');
+    return view('dataTable.index');
 })->name('dataTable');
 
 

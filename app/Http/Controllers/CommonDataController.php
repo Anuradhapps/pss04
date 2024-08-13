@@ -29,7 +29,7 @@ class CommonDataController extends Controller
     }
 
     public function index(){
-        return view('dataInput',[
+        return view('dataInput.index',[
             'provinces'=>Location::distinct()->pluck('province'),
             'districts' => [],
             'asc_s' => [],
