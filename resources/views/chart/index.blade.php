@@ -3,7 +3,7 @@
         {{ __('Chart') }}
     </x-slot>
     <x-main-panel>
-        <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+        @livewire('live-test')
     </x-main-panel>
 
 </x-app-layout>

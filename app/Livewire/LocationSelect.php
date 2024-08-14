@@ -5,9 +5,8 @@ namespace App\Livewire;
 use App\Models\Location;
 use Livewire\Component;
 
-class Counter extends Component
+class LocationSelect extends Component
 {
-
     public $Provinces;
     public $Districts = [];
     public $ascs = [];
@@ -50,9 +49,8 @@ class Counter extends Component
             ->pluck('ai_range');
         $this->selectedAi = null;
     }
-
     public function render()
     {
-        return view('livewire.counter');
+        return view('livewire.location-select');
     }
 }
