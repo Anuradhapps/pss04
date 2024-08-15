@@ -44,12 +44,12 @@
                     </div>
 
                     <div class="mb-4">
-                        <label for="breeding_method" class="block text-sm font-medium text-gray-700">Breeding
+                        <label for="breeding_method" class="block text-sm font-medium text-gray-700">Establishment
                             Method:</label>
                         <select name="breeding_method" id=""
                             class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             required>
-                            <option value="" class="text-gray-300">Select a breeding
+                            <option value="" class="text-gray-300">Select a Establishment
                                 method</option>
                             <option value="Broadcast">Broadcast</option>
                             <option value="Transplant">Transplant</option>
